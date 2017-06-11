@@ -1,0 +1,32 @@
+------------------------------------------------FILE INFO------------------------------------------------
+map5.pgm and map5.yaml: Our attempt to try gmapping, not very good results. These files are obsolete.
+
+deneme7.world: Our testing environment for project
+
+mapformat.txt: Description of how a map file should be written
+robotankMAP.txt: Manually created map file for our environment (deneme7.world)
+
+robot_design.png: Picture of Turtlebot modified by Boran
+hexagons.urdf: This file needs to be placed to "opt/ros/kinetic/share/turtlebot_description/urdf/stacks/" and simulation must be started in an empty world
+
+src: Contains all source code
+src/Code_References: Contains information about which parts of the code belongs to Robotank team and which parts are taken
+
+
+
+------------------------------------------------INSTRUCTIONS------------------------------------------------
+1) Put src folder inside catkin workspace
+
+2) Put robotankMAP.txt folder inside catkin workspace (unfortunately, filename of map and patrol locations are not configurable from outside, a little code modification needed)
+
+3) Put hexagons.urdf.xacro into folder opt/ros/kinetic/share/turtlebot_description/urdf/stacks/
+
+4) Start the simulation by
+roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=<path to deneme7.world>
+
+5) Start each node
+rosrun motion_detector motion_detector_node 
+rosrun turner turner_node
+rosrun patroller patroller_node 
+
+6) Watch the simulation until robot lose its position and crashes into a wall, then go to step 4
