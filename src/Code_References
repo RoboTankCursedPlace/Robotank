@@ -1,0 +1,8 @@
+*MOST OF THE CODE INSIDE "motion_detector" FOLDER/NODE ADDED BY ROBOTANK TEAM, 
+    except QuickSelect algorithm, reference inside select.h
+
+*MOST OF THE CODE INSIDE "patroller" FOLDER/NODE ADDED BY ROBOTANK TEAM, 
+    except some of code lines in file "patroller_node.cpp" belongs to Damien Jade Duff, taken from BLG 456E Assignment 2
+
+*In "turner" FOLDER/NODE, 
+    using model_state within c++ code is TAKEN FROM http://answers.ros.org/question/12116/calling-gazebo-service-set_model_state-in-c-code/
